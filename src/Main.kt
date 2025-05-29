@@ -8,7 +8,7 @@ fun main() {
 
     var x2: Double?
 
-    val a: Double = readlnOrNull()
+    val a = readlnOrNull()
         ?.takeIf { it.isNotBlank() && it.contains(Regex("-?\\d+(\\.\\d+)?")
         ) }
         ?.toDouble()
@@ -19,13 +19,13 @@ fun main() {
         return
     }
 
-    val b: Double = readlnOrNull()
+    val b = readlnOrNull()
         ?.takeIf { it.isNotBlank() && it.contains(Regex("-?\\d+(\\.\\d+)?")
         ) }
         ?.toDouble()
         ?: 0.0
 
-    val c: Double = readlnOrNull()
+    val c = readlnOrNull()
         ?.takeIf { it.isNotBlank() && it.contains(Regex("-?\\d+(\\.\\d+)?")
         ) }
         ?.toDouble()
