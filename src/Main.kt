@@ -9,9 +9,7 @@ fun main() {
     var x2: Double?
 
     val a = readlnOrNull()
-        ?.takeIf { it.isNotBlank() && it.contains(Regex("-?\\d+(\\.\\d+)?")
-        ) }
-        ?.toDouble()
+        ?.toDoubleOrNull()
         ?: 0.0
 
     if (a == 0.0) {
@@ -20,18 +18,14 @@ fun main() {
     }
 
     val b = readlnOrNull()
-        ?.takeIf { it.isNotBlank() && it.contains(Regex("-?\\d+(\\.\\d+)?")
-        ) }
-        ?.toDouble()
+        ?.toDoubleOrNull()
         ?: 0.0
 
     val c = readlnOrNull()
-        ?.takeIf { it.isNotBlank() && it.contains(Regex("-?\\d+(\\.\\d+)?")
-        ) }
-        ?.toDouble()
+        ?.toDoubleOrNull()
         ?: 0.0
 
-    val delta = (b.pow(2.0) - 4 * a * c)
+    val delta = b.pow(2.0) - 4 * a * c
 
     when {
         delta > 0.0 -> {
